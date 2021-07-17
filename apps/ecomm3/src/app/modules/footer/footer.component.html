@@ -1,0 +1,87 @@
+<div class="site-footer">
+    <app-decor class="site-footer__decor" type="bottom"></app-decor>
+    <div class="site-footer__widgets">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-xl-4">
+                    <h5 class="footer-contacts__title">{{ 'HEADER_CONTACT_US' | translate }}</h5>
+
+                    <div class="footer-contacts__text">{{ 'TEXT_CONTACT_US_MESSAGE' | translate }}</div>
+
+                    <address class="footer-contacts__contacts">
+                        <dl>
+                            <dt>{{ 'TEXT_PHONE_NUMBER' | translate }}</dt>
+                            <dd>{{ infoSupport?.supportPhoneNumber }}</dd>
+                        </dl>
+                        <dl>
+                            <dt>{{ 'TEXT_EMAIL_ADDRESS' | translate }}</dt>
+                            <dd *ngIf="infoSupport?.supportEmailAddress">
+                                <a [href]="'mailto:' + infoSupport.supportEmailAddress">{{ infoSupport.supportEmailAddress }}</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>{{ 'TEXT_OUR_LOCATION' | translate }}</dt>
+                            <dd>Address: P.O. Box 1129
+                                Westhampton Beach, NY 11978
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>{{ 'TEXT_WORKING_HOURS' | translate }}</dt>
+                            <dd >9am-5pm</dd>
+                        </dl>
+                    </address>
+                </div>
+                <div class="col-6 col-md-3 col-xl-2">
+                    <app-links
+                        class="site-footer__widget"
+                        [header]="'HEADER_INFORMATION' | translate"
+                        [links]="[
+                            {title: 'LINK_ABOUT_US' | translate, url: '/site/about-us'},
+                            {title: 'LINK_FAQ' | translate, url: '/site/faq'},
+                            {title: 'LINK_TERMS_AND_CONDITIONS' | translate, url: '/site/terms'},
+                            {title: 'LINK_SITE_MAP' | translate}
+                        ]"
+                    ></app-links>
+                </div>
+<!--                <div class="col-6 col-md-3 col-xl-2">-->
+<!--                    <app-links-->
+<!--                        class="site-footer__widget"-->
+<!--                        [header]="'HEADER_MY_ACCOUNT' | translate"-->
+<!--                        [links]="[-->
+<!--                        ]"-->
+<!--                    ></app-links>-->
+<!--&lt;!&ndash;                    <app-links&ndash;&gt;-->
+<!--&lt;!&ndash;                        class="site-footer__widget"&ndash;&gt;-->
+<!--&lt;!&ndash;                        [header]="'HEADER_MY_ACCOUNT' | translate"&ndash;&gt;-->
+<!--&lt;!&ndash;                        [links]="[&ndash;&gt;-->
+<!--&lt;!&ndash;                            {title: 'LINK_STORE_LOCATION' | translate},&ndash;&gt;-->
+<!--&lt;!&ndash;                            {title: 'LINK_ORDER_HISTORY' | translate},&ndash;&gt;-->
+<!--&lt;!&ndash;                            {title: 'LINK_WISH_LIST' | translate},&ndash;&gt;-->
+<!--&lt;!&ndash;                            {title: 'LINK_NEWSLETTER' | translate},&ndash;&gt;-->
+<!--&lt;!&ndash;                            {title: 'LINK_SPECIAL_OFFERS' | translate},&ndash;&gt;-->
+<!--&lt;!&ndash;                            {title: 'LINK_GIFT_CERTIFICATES' | translate},&ndash;&gt;-->
+<!--&lt;!&ndash;                            {title: 'LINK_AFFILIATE' | translate}&ndash;&gt;-->
+<!--&lt;!&ndash;                        ]"&ndash;&gt;-->
+<!--&lt;!&ndash;                    ></app-links>&ndash;&gt;-->
+<!--                </div>-->
+<!--                <div class="col-12 col-md-6 col-xl-4">-->
+<!--                    <app-newsletter class="site-footer__widget"></app-newsletter>-->
+<!--                </div>-->
+            </div>
+        </div>
+    </div>
+    <div class="site-footer__bottom">
+        <div class="container">
+            <div class="site-footer__bottom-row">
+                <div class="site-footer__copyright">
+                    <!-- copyright -->
+                    Powered by <a href="https://naologic.com/" target="_blank">Naologic</a>
+                    <!-- copyright / end -->
+                </div>
+<!--                <div class="site-footer__payments">-->
+<!--                    <img src="assets/images/payments.png" alt="">-->
+<!--                </div>-->
+            </div>
+        </div>
+    </div>
+</div>

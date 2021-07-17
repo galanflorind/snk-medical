@@ -1,0 +1,42 @@
+@import '~ngx-toastr/toastr';
+@import 'scss/bootstrap';
+@import 'scss/style';
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+// *****************************************************
+// Scrollbars
+.nao-fancy-scrollbar-sm {
+    &::-webkit-scrollbar {
+        height: 8px;
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-track-piece {
+        background: rgba(9, 30, 66, .08);
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgba(9, 30, 66, .2);
+        border-radius: 4px;
+    }
+}
+
+
+.create-an-account-link {
+    margin-left: 32px;
+    color: #6c757d;
+    transition: color 0.1s;
+
+    &:hover {
+        color: inherit;
+    }
+
+    @include media-breakpoint-down(xs) {
+        margin-left: 24px;
+    }
+}
+
+.font-size-13 {
+    font-size: 13px;
+}

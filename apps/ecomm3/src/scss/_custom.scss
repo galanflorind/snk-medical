@@ -1,0 +1,57 @@
+// --------------------------------------------------------------------------
+// -- You can add your custom CSS here and it will overwrite template styles.
+// --------------------------------------------------------------------------
+
+
+// *************************************************
+// nao member avatar
+.nao-avatar-icon {
+    border-radius: 50%;
+    position: relative;
+    line-height: 1;
+    overflow: hidden;
+    background-color: #3E40DB;
+
+    &.badge-sm {
+        max-width: 44px;
+        width: 44px;
+        max-height: 44px;
+        height: 44px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    &.badge-md {
+        max-width: 88px;
+        width: 88px;
+        max-height: 88px;
+        height: 88px;
+        font-size: 20px;
+    }
+}
+
+.home-showcase-primary-product {
+    .showcase-product-name {
+        font-size: 45px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .showcase-product-description {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        color: #6c7177;
+    }
+
+    .featured-product-image {
+        max-height: 400px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+
+        @include media-breakpoint-up(sm) {
+            max-width: 450px;
+        }
+    }
+}
